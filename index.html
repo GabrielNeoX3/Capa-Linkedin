@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Cover Image</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .banner {
+      width: 1128px; /* LinkedIn cover size */
+      height: 191px;
+      background: linear-gradient(135deg, #0073b1, #00aaff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner::before, .banner::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .banner::before {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      left: -50px;
+    }
+
+    .banner::after {
+      width: 200px;
+      height: 200px;
+      bottom: -50px;
+      right: -50px;
+    }
+
+    .text-container {
+      text-align: center;
+      z-index: 2;
+    }
+
+    .text-container .headline {
+      font-size: 28px;
+      margin: 0;
+    }
+
+    .text-container .subheadline {
+      font-size: 18px;
+      margin-top: 5px;
+      font-weight: normal;
+    }
+
+    /* Add responsiveness */
+    @media (max-width: 768px) {
+      .banner {
+        font-size: 20px;
+      }
+
+      .banner::before {
+        width: 200px;
+        height: 200px;
+      }
+
+      .banner::after {
+        width: 150px;
+        height: 150px;
+      }
+
+      .text-container .headline {
+        font-size: 22px;
+      }
+
+      .text-container .subheadline {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="text-container">
+      <p class="headline">Desenvolvendo Soluções de Alto Impacto</p>
+      <p class="subheadline">Full Stack Developer | React | Node.js | TypeScript</p>
+    </div>
+  </div>
+</body>
+</html>
